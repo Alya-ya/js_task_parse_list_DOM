@@ -24,13 +24,13 @@ function getEmployees(items) {
   for (const item of items) {
     const employeeName = item.dataset.name;
     const position = item.dataset.position;
-    const salary = Number(item.dataset.salary);
+    const salar = Number(item.dataset.salary.replace('$', '').replace(',', ''));
     const age = item.dataset.age;
 
     result.push({
       employeeName,
       position,
-      salary,
+      salar,
       age,
     });
   }
